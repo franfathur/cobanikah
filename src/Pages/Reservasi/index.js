@@ -147,7 +147,6 @@ export default function Reservasi() {
                         <p className='md:text-lg text-xs font-semibold'>Detik</p>
                     </div>
                 </div>
-                <h1 data-aos="fade-up" className='text-center text-2xl font-semibold custom-font-3 mx-4 text-[#413327] mb-4'>Untuk Yang Berhalangan Hadir, Kami Tambahkan Fitur Dibawah Ini</h1>
                 <div data-aos="fade-up" className='flex justify-center'>
                     <button type="button" onClick={() => openAmplop()} className="text-white shadow-lg text-md bg-[#413327] hover:bg-[#31261d] font-bold rounded-xl px-5 py-3.5 mr-2 mb-2">
                         <FontAwesomeIcon icon={faMoneyBill1} /> Amplop
