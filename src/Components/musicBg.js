@@ -1,6 +1,7 @@
 import { faClose, faPause, faPlay } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
+import './MusicBg.css' // Import the new CSS file
 
 export default function MusicBg({ onClick, statsPlay, visible, onClose }) {
 
@@ -9,7 +10,9 @@ export default function MusicBg({ onClick, statsPlay, visible, onClose }) {
             <div className={`fixed z-10 bottom-2 right-2 `}>
                 <div className='flex'>
                     <button onClick={onClick} className={`text-white ${visible === true ? 'translate-y-[0px]' : 'translate-y-[200px]'} duration-300 text-md flex items-center max-w-[150px] bg-black/75 hover:bg-black font-bold rounded-xl px-5 py-3.5 mr-2 mb-2`}>
-                        <marquee id="musicText" className='text-sm'>Payung Teduh - Akad.mp3</marquee>
+                        <div className='scrolling-text-container'>
+                            <p className='scrolling-text'>Payung Teduh - Akad.mp3</p>
+                        </div>
                         <FontAwesomeIcon className='ml-2' icon={statsPlay === true ? faPause : faPlay} />
                     </button>
                     <button onClick={onClose} className={`text-white ${visible === true ? 'translate-y-[0px]' : 'translate-y-[200px]'} duration-300 text-md flex items-center max-w-[150px] bg-black/75 hover:bg-black font-bold rounded-xl px-5 py-3.5 mr-2 mb-2`}>
