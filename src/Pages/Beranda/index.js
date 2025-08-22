@@ -54,8 +54,7 @@ export default function Beranda() {
         window.onscroll = function () { vBtnTop() };
         playing ? audio.play() : audio.pause();
         audio.loop = true;
-    }, [playing])
-
+    }, [playing, audio]) // 'audio' is added here to fix the missing dependency error
 
     return (
         <>
