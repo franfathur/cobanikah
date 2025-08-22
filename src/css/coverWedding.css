@@ -1,0 +1,65 @@
+/* Background gradient pastel bergerak */
+.wedding-bg {
+  background: linear-gradient(-45deg, #fce7e1, #fff4e6, #fce7e1, #ffeadd);
+  background-size: 400% 400%;
+  animation: weddingGradient 20s ease infinite;
+}
+
+@keyframes weddingGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Teks masuk fade-in */
+.animate-fadeIn {
+  animation: fadeInUp 1.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Hiasan melayang */
+.floating {
+  animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Kelopak bunga jatuh tanpa PNG */
+.petal {
+  position: absolute;
+  top: -10%;
+  width: 20px;
+  height: 30px;
+  background-color: #fcb6b6; /* warna kelopak pink pastel */
+  border-radius: 50% 50% 50% 50%;
+  animation: fall linear infinite;
+  opacity: 0.8;
+}
+
+.petal:nth-child(odd) {
+  animation-duration: 10s;
+  animation-delay: 2s;
+}
+.petal:nth-child(even) {
+  animation-duration: 12s;
+  animation-delay: 4s;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    left: calc(10% + 80% * var(--rand));
+  }
+  100% {
+    transform: translateY(120vh) rotate(360deg);
+    left: calc(10% + 80% * var(--rand));
+  }
+}
